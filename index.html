@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Dogs</title>
+    <style>
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            font-size: 70px;
+            color: #8471ff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #71ffe7;
+        }
+
+        header {
+            background-image: url('img/dog1.jpg'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: local;
+            padding: 200px;
+            text-align: center;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5); 
+        }
+
+        header img {
+            max-width: 100px; 
+        }
+
+        header::after {
+            content: "\25BC";
+            font-size: 70px;
+            position: local;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section2 {
+            background-image: url('img/dog2.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: local;
+            padding: 170px;
+            color: #71ffe7;
+            display: flex;
+            align-items: center; 
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .section-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title {
+            flex: 1; 
+        }
+
+        .title h2 {
+            margin-bottom: 10px;
+        }
+
+        .content {
+            flex: 1; 
+        }
+
+        .content p {
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5); 
+        }
+        
+        .button {
+            flex: 0.3; 
+            text-align: left ;
+        }
+
+        .button a {
+            background-color: #71ffe7;
+            color: #624f4f;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button a:hover {
+            background-color: #48a091;
+        }
+
+        .section3 {
+            background-image: url('img/dog4.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: local;
+            padding: 170px;
+            color: #71ffe7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .section-content2 {
+            text-align: center;
+        }
+
+        .title3 h2 {
+            margin-bottom: 20px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .image {
+            margin: 0 10px; 
+            text-align: center;
+        }
+
+        .image img {
+            max-width: 100%; 
+            height: 200px; 
+            width: auto;
+        }
+
+        .image-text {
+            margin-top: 10px;
+        }
+        
+        .centered-button {
+            text-align: center;
+            margin-top: 20px; 
+        }
+
+        .centered-button a {
+            background-color: #71ffe7;
+            color: #614747;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .centered-button a:hover {
+            background-color: #48a091;
+        }
+
+        .section4 {
+            background-image: url('img/dog5.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: local;
+            padding: 170px;
+            color: #71ffe7;
+            display: flex;
+            align-items: center; 
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .section5 {
+            background-image: url('img/dog6.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: local;
+            padding: 100px 0; 
+            text-align: center;
+            color: #fff;
+        }
+
+        .circle {
+            background-color: #000;
+            width: 150px; 
+            height: 150px;
+            border-radius: 50%; 
+            display: inline-block;
+            margin: 0 20px; 
+        }
+
+        .circle-content {
+            text-align: center;
+            padding-top: 20px; 
+        }
+
+        .top-text p,
+        .bottom-text p {
+            color: #fff;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .section6 {
+            background-image: url('img/dog7.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: local;
+            padding: 100px 0; 
+            text-align: center;
+            color: #71ffe7;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .section6 p {
+            max-width: 500px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            color: #71ffe7;
+            border-radius: 5px; 
+        }
+
+        .centered-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .circle-image img {
+            border-radius: 50%; 
+            width: 150px;
+            height: 150px;
+        }
+
+        p {
+            margin: 20px 0;
+            font-size: 16px;
+        }
+
+        h2 {
+            margin: 10px 0;
+        }
+
+        .arrow-down {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 20px solid #71ffe7;
+            margin: 20px 0;
+        }
+
+        .section7 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section7 .image-container {
+            display: flex;
+            margin: 0; 
+            padding: 0;
+        }
+
+        .section7 .image {
+            width: 25%; 
+            max-height: 400px;
+            object-fit: cover;
+            margin: 0; 
+            padding: 0; 
+        }
+
+        .section7 .image:not(:last-child) {
+            margin-right: 0px; 
+        }
+
+        .section7 .image:last-child {
+            margin-right: 0; 
+        }
+
+        .arrow {
+            position: absolute;
+            width: 40px; 
+            height: 40px;
+            background-color: #71ffe7; 
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 24px;
+            color: #71ffe7; 
+        }
+
+        .left-arrow {
+            left: 20px;
+        }
+
+        .right-arrow {
+            right: 20px; 
+            transform: scaleX(-1); 
+        }
+
+
+
+        main h2, main p {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-image: url('img/dog8.jpg'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: local;
+            padding: 100px; 
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h3 {
+            font-size: 34px;
+        }
+
+        .footer-left {
+            width: 45%; 
+            text-align: left;
+        }
+
+        .footer-right {
+            width: 45%; 
+            text-align: right;
+        }
+
+        .social-icon {
+            width: 30px; 
+            height: 30px; 
+        }
+
+        .textbox {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+        .form-group label {
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/logo.jpg" alt="Logo"> 
+        <h1>Programming Assignment 3</h1>
+        <h2>TIME FOR CUTE DOGS</h2>
+    </header>
+
+    <main>
+        <section class="section2">
+            <div class="section-content">
+                <div class="title">
+                    <h2>CUTE DOGS</h2>
+                </div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Nam ornare efficitur sapien nec volutpat. Suspendisse nec tempus 
+                        velit, at porttitor tellus. Praesent porta nisl sed varius ornare. 
+                        In hac habitasse platea dictumst. Donec pellentesque libero non sem laoreet, 
+                        non elementum leo tempus. Donec sapien odio, aliquam sit amet tempus 
+                        vel, iaculis et tortor. Suspendisse vitae nisi eget nisl vehicula suscipit.
+                         In hac habitasse platea dictumst. Aliquam elementum mi dolor, quis eleifend
+                          ante euismod sit amet. Maecenas nec justo lacus.</p>
+                    <p>Sed id urna vulputate justo lobortis ultricies in nec lorem. Proin arcu 
+                        ipsum, varius nec libero vel, posuere convallis orci. Integer pellentesque
+                         blandit mattis. Maecenas eu venenatis est. Cras fringilla rutrum tellus,
+                          ac iaculis augue aliquet a. Duis a nulla sit amet est volutpat dignissim
+                           non ac elit. Duis auctor ex eu ornare aliquam. Proin in efficitur justo,
+                            ut maximus lectus. Fusce nisi ligula, volutpat ac est eu, tempus cursus
+                             risus. Ut elit nunc, commodo nec urna ac, semper efficitur turpis.
+                              Proin bibendum justo sit amet erat efficitur, ac suscipit lacus tempus.
+                               Praesent felis sapien, euismod ac dictum ut, porttitor at enim. Proin
+                                fringilla dignissim sodales. Praesent et placerat nisi.</p>
+                    <div class="button">
+                        <a href="#">Read More</a>
+                    </div>            
+                </div>
+            </div>
+        </section>
+
+        <section class="section3">
+            <div class="section-content2">
+                <div class="title3">
+                    <h2>Section 3 Title</h2>
+                </div>
+                <div class="image-container">
+                    <div class="image">
+                        <img src="img/section3-1.jpg" alt="Image 1">
+                        <div class="image-text">Beagle</div>
+                    </div>
+                    <div class="image">
+                        <img src="img/section3-2.jpg" alt="Image 2">
+                        <div class="image-text">Shetland Sheepdog</div>
+                    </div>
+                    <div class="image">
+                        <img src="img/section3-3.jpg" alt="Image 3">
+                        <div class="image-text">Golden Retriever</div>
+                    </div>
+                </div>
+                <div class="centered-button">
+                    <a href="#">Read More</a>
+                </div>  
+            </div>
+        </section>
+        
+        <section class="section4">
+            <div class="section-content">
+                <div class="title">
+                    <h2>CUTE DOGS VOL 2</h2>
+                </div>
+                <div class="content">
+                    <h2>IPSUM LOREM</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Nam ornare efficitur sapien nec volutpat. Suspendisse nec tempus 
+                        velit, at porttitor tellus. Praesent porta nisl sed varius ornare. 
+                        In hac habitasse platea dictumst. Donec pellentesque libero non sem laoreet, 
+                        non elementum leo tempus. Donec sapien odio, aliquam sit amet tempus 
+                        vel, iaculis et tortor. Suspendisse vitae nisi eget nisl vehicula suscipit.
+                         In hac habitasse platea dictumst. Aliquam elementum mi dolor, quis eleifend
+                          ante euismod sit amet. Maecenas nec justo lacus.</p>
+
+                          <h2>LOREM IPSUM</h2>
+                    <p>Sed id urna vulputate justo lobortis ultricies in nec lorem. Proin arcu 
+                        ipsum, varius nec libero vel, posuere convallis orci. Integer pellentesque
+                         blandit mattis. Maecenas eu venenatis est. Cras fringilla rutrum tellus,
+                          ac iaculis augue aliquet a. Duis a nulla sit amet est volutpat dignissim
+                           non ac elit. Duis auctor ex eu ornare aliquam. Proin in efficitur justo,
+                            ut maximus lectus. Fusce nisi ligula, volutpat ac est eu, tempus cursus
+                             risus. Ut elit nunc, commodo nec urna ac, semper efficitur turpis.
+                              Proin bibendum justo sit amet erat efficitur, ac suscipit lacus tempus.
+                               Praesent felis sapien, euismod ac dictum ut, porttitor at enim. Proin
+                                fringilla dignissim sodales. Praesent et placerat nisi.</p>    
+                </div>
+            </div>
+        </section>
+
+        <section class="section5">
+            <div class="circle">
+                <div class="circle-content top-text">
+                    <p>1000</p>
+                </div>
+                <div class="circle-content bottom-text">
+                    <p>Cute Dogs</p>
+                </div>
+            </div>
+            <div class="circle">
+                <div class="circle-content top-text">
+                    <p>4000</p>
+                </div>
+                <div class="circle-content bottom-text">
+                    <p>Cute dog feet</p>
+                </div>
+            </div>
+            <div class="circle">
+                <div class="circle-content top-text">
+                    <p>2000</p>
+                </div>
+                <div class="circle-content bottom-text">
+                    <p>Dog eyes</p>
+                </div>
+            </div>
+            <div class="circle">
+                <div class="circle-content top-text">
+                    <p>2000</p>
+                </div>
+                <div class="circle-content bottom-text">
+                    <p>Dog Ears</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section6">
+            <div class="centered-content">
+                <div class="circle-image">
+                    <img src="img/dog6.jpg" alt="Circular Image">
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. s
+                    Nam ornare efficitur sapien nec volutpat. Suspendisse nec tempus 
+                    velit, at porttitor tellus. Praesent porta nisl sed varius ornare. 
+                    In hac habitasse platea dictumst. Donec pellentesque libero non sem laoreet, 
+                    non elementum leo tempus. Donec sapien odio, aliquam sit amet tempus 
+                    vel, iaculis et tortor. Suspendisse vitae nisi eget nisl vehicula suscipit.
+                     In hac habitasse platea dictumst. Aliquam elementum mi dolor, quis eleifend
+                      ante euismod sit amet. Maecenas nec justo lacus.</p>
+                <h2>Puggter the Pug</h2>
+                <div class="arrow-down"></div>
+            </div>
+        </section>
+
+        <section class="section7">
+            <div class="image-container">
+                <img class="image" src="img/dog1.jpg" alt="Image 1">
+                <img class="image" src="img/dog2.jpg" alt="Image 2">
+                <img class="image" src="img/dog3.jpg" alt="Image 3">
+                <img class="image" src="img/dog4.jpg" alt="Image 4">
+            </div>
+            <div class="arrow left-arrow"></div>
+            <div class="arrow right-arrow"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <h3>Contact Us</h3>
+            <p>Toll Free: 800-208-0200</p>
+            <p>Anchorage: 907-245-0200</p>
+            <p>Fax: 907-245-0400</p>
+            <p>Email: info@alaska.com</p>
+            <div class="social-icons">
+                <a href="#"><img class="social-icon" src="img/facebooklogo.png" alt="Facebook"></a>
+                <a href="#"><img class="social-icon" src="img/twitterlogo.png" alt="Twitter"></a>
+                <a href="#"><img class="social-icon" src="img/instagramlogo.png" alt="Instagram"></a>
+                <a href="#"><img class="social-icon" src="img/pintrestlogo.png" alt="Pinterest"></a>
+                <a href="#"><img class="social-icon" src="img/linkedinlogo.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+        <div class="footer-right">
+            <form action="#" method="post">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" class="textbox" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" class="textbox" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" class="textbox" placeholder="Message" required></textarea>
+                </div>
+                <div class="button">
+                    <a href="#">Submit</a>
+                </div>
+            </form>
+        </div>
+    </footer>
+</body>
+</html>
